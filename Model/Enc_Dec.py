@@ -16,8 +16,8 @@ class Encoder(nn.Module):
         "Pass the input (and mask) through each layer in turn."
         for layer in self.layers:
             x = layer(x, mask)
-        # return self.norm(x)
-        return x
+        return self.norm(x)
+        # return x
 
 class Decoder(nn.Module):
     "Generic N layer decoder with masking."
@@ -29,8 +29,8 @@ class Decoder(nn.Module):
     def forward(self, x, memory, x_mask, y_mask):
         for layer in self.layers:
             x = layer(x, memory, x_mask, y_mask)
-        # return self.norm(x)
-        return x
+        return self.norm(x)
+        # return x
 
 class Generator(nn.Module):
     "Define standard linear + softmax generation step."
