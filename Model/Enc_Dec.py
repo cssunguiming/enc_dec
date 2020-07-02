@@ -36,7 +36,7 @@ class Generator(nn.Module):
     "Define standard linear + softmax generation step."
     def __init__(self, d_model, token_size):
         super(Generator, self).__init__()
-        self.place_Linear = nn.Linear(d_model*2-20, token_size)
+        self.place_Linear = nn.Linear(d_model*2, token_size)
 
     def forward(self, x):
         logit = self.place_Linear(x)
@@ -71,7 +71,7 @@ class EncoderDecoder(nn.Module):
         encoder_out = self.encode(x, x_time, x_mask)
         decoder_out = self.decode(encoder_out, x_mask, y, y_time, y_mask)
         encoder2_output = self.encode2(y, y_time, yx_mask)
-        out = torch.cat([decoder_out[:,:,:-10], encoder2_output[:,:,:-10]], dim=-1)
+        out = torch.cat([decoder_out, encoder2_output], dim=-1)
         # out = encoder2_output
         output = self.generator(out)
         return output

@@ -33,3 +33,27 @@ Start Time: 2020-07-02 09:50:01.
  --Valid--  Epoch: 30/400  Valid_avg_loss: 559.8465492398132 Valid_acc: 9.658052727747325
  --Valid--  Epoch: 31/400  Valid_avg_loss: 558.5227492089365 Valid_acc: 10.173583920647351
  --Valid--  Epoch: 32/400  Valid_avg_loss: 558.3443067962048 Valid_acc: 9.788566953797964
+ --Valid--  Epoch: 33/400  Valid_avg_loss: 560.6192978503657 Valid_acc: 9.357870007830854
+ --Valid--  Epoch: 34/400  Valid_avg_loss: 557.697031507305 Valid_acc: 9.7755155311929
+ --Valid--  Epoch: 35/400  Valid_avg_loss: 557.5139062918869 Valid_acc: 9.90602975724354
+ --Valid--  Epoch: 36/400  Valid_avg_loss: 559.005942101572 Valid_acc: 9.514487079091621
+ --Valid--  Epoch: 37/400  Valid_avg_loss: 556.8976857802447 Valid_acc: 10.180109631949882
+ --Valid--  Epoch: 38/400  Valid_avg_loss: 556.5075016395718 Valid_acc: 10.310623858000522
+ --Valid--  Epoch: 39/400  Valid_avg_loss: 558.1329176659677 Valid_acc: 10.173583920647351
+ --Valid--  Epoch: 40/400  Valid_avg_loss: 558.0034555173388 Valid_acc: 9.762464108587835
+ --Valid--  Epoch: 41/400  Valid_avg_loss: 556.3830415314319 Valid_acc: 10.317149569303053
+ --Valid--  Epoch: 42/400  Valid_avg_loss: 556.888084561217 Valid_acc: 9.925606891151135
+ --Valid--  Epoch: 43/400  Valid_avg_loss: 558.3228447110046 Valid_acc: 9.716784129470112
+ --Valid--  Epoch: 44/400  Valid_avg_loss: 557.4700140859567 Valid_acc: 9.925606891151135
+ --Valid--  Epoch: 45/400  Valid_avg_loss: 557.035088483025 Valid_acc: 9.853824066823284
+ --Valid--  Epoch: 46/400  Valid_avg_loss: 556.8069701849246 Valid_acc: 10.030018271991647
+ --Valid--  Epoch: 47/400  Valid_avg_loss: 557.3796220667222 Valid_acc: 9.54711563560428
+ --Valid--  Epoch: 48/400  Valid_avg_loss: 558.61638731115 Valid_acc: 9.925606891151135
+ --Valid--  Epoch: 49/400  Valid_avg_loss: 555.7804537006454 Valid_acc: 10.062646828504308
+ --Valid--  Epoch: 50/400  Valid_avg_loss: 556.6562488032322 Valid_acc: 9.958235447663796
+ --Valid--  Epoch: 51/400  Valid_avg_loss: 556.7944060680913 Valid_acc: 9.886452623335943
+ --Valid--  Epoch: 52/400  Valid_avg_loss: 557.6397709566004 Valid_acc: 10.082223962411902
+ --Valid--  Epoch: 53/400  Valid_avg_loss: 556.5765412274529 Valid_acc: 10.07569825110937
+ --Valid--  Epoch: 54/400  Valid_avg_loss: 555.2179454728669 Valid_acc: 10.50639519707648
+ --Valid--  Epoch: 55/400  Valid_avg_loss: 556.3048601337508 Valid_acc: 10.36935525972331
+ --Valid--  Epoch: 56/400  Valid_avg_loss: 555.2083182241403 Valid_acc: 10.07569825110937
