@@ -70,9 +70,9 @@ class EncoderDecoder(nn.Module):
         "Take in and process masked src and target sequences."
         encoder_out = self.encode(x, x_time, x_mask)
         decoder_out = self.decode(encoder_out, x_mask, y, y_time, y_mask)
-        encoder2_output = self.encode2(y, y_time, yx_mask)
-        out = torch.cat([decoder_out, encoder2_output], dim=-1)
-        # out = encoder2_output
+        # encoder2_output = self.encode2(y, y_time, yx_mask)
+        # out = torch.cat([decoder_out, encoder2_output], dim=-1)
+        out = decoder_out
         output = self.generator(out)
         return output
     
