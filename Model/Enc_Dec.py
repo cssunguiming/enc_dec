@@ -36,7 +36,7 @@ class Generator(nn.Module):
     "Define standard linear + softmax generation step."
     def __init__(self, d_model, token_size):
         super(Generator, self).__init__()
-        self.place_Linear = nn.Linear(d_model*2, token_size)
+        self.place_Linear = nn.Linear(d_model, token_size)
 
     def forward(self, x):
         logit = self.place_Linear(x)
