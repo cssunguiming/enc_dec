@@ -1,0 +1,35 @@
+
+# Note: .
+Start Time: 2020-07-02 09:50:01.
+ --Valid--  Epoch: 1/400  Valid_avg_loss: 692.4112070121017 Valid_acc: 0.274079874706343
+ --Valid--  Epoch: 2/400  Valid_avg_loss: 700.7665245205749 Valid_acc: 0.46985121378230227
+ --Valid--  Epoch: 3/400  Valid_avg_loss: 640.8974956437653 Valid_acc: 3.3476898981989036
+ --Valid--  Epoch: 4/400  Valid_avg_loss: 624.4365436329562 Valid_acc: 4.6658835813103625
+ --Valid--  Epoch: 5/400  Valid_avg_loss: 612.0710610782398 Valid_acc: 5.462020360219264
+ --Valid--  Epoch: 6/400  Valid_avg_loss: 599.4760110892502 Valid_acc: 6.66927695118768
+ --Valid--  Epoch: 7/400  Valid_avg_loss: 596.278891320322 Valid_acc: 7.126076742364917
+ --Valid--  Epoch: 8/400  Valid_avg_loss: 588.0971901089538 Valid_acc: 8.000522056904202
+ --Valid--  Epoch: 9/400  Valid_avg_loss: 581.4617047777363 Valid_acc: 8.444270425476377
+ --Valid--  Epoch: 10/400  Valid_avg_loss: 578.9776134116977 Valid_acc: 8.594361785434613
+ --Valid--  Epoch: 11/400  Valid_avg_loss: 575.7130035699582 Valid_acc: 9.162098668754894
+ --Valid--  Epoch: 12/400  Valid_avg_loss: 571.6565105961819 Valid_acc: 9.168624380057427
+ --Valid--  Epoch: 13/400  Valid_avg_loss: 570.0926904117359 Valid_acc: 9.338292873923258
+ --Valid--  Epoch: 14/400  Valid_avg_loss: 569.4382410984414 Valid_acc: 8.894544505351083
+ --Valid--  Epoch: 15/400  Valid_avg_loss: 565.072301827225 Valid_acc: 9.468807099973898
+ --Valid--  Epoch: 16/400  Valid_avg_loss: 566.3936757106407 Valid_acc: 9.253458626990342
+ --Valid--  Epoch: 17/400  Valid_avg_loss: 564.2967653461532 Valid_acc: 9.220830070477682
+ --Valid--  Epoch: 18/400  Valid_avg_loss: 563.2827311497109 Valid_acc: 9.703732706865049
+ --Valid--  Epoch: 19/400  Valid_avg_loss: 562.0207589841357 Valid_acc: 9.768989819890368
+ --Valid--  Epoch: 20/400  Valid_avg_loss: 562.8207466275085 Valid_acc: 9.899504045941008
+ --Valid--  Epoch: 21/400  Valid_avg_loss: 560.9788779464423 Valid_acc: 9.48185852257896
+ --Valid--  Epoch: 22/400  Valid_avg_loss: 561.2663019217697 Valid_acc: 9.736361263377708
+ --Valid--  Epoch: 23/400  Valid_avg_loss: 561.3281362196979 Valid_acc: 9.273035760897939
+ --Valid--  Epoch: 24/400  Valid_avg_loss: 560.7411367378983 Valid_acc: 9.664578439049857
+ --Valid--  Epoch: 25/400  Valid_avg_loss: 559.4114333508062 Valid_acc: 10.095275385016967
+ --Valid--  Epoch: 26/400  Valid_avg_loss: 558.8714303409351 Valid_acc: 9.853824066823284
+ --Valid--  Epoch: 27/400  Valid_avg_loss: 561.0767623302984 Valid_acc: 9.651527016444792
+ --Valid--  Epoch: 28/400  Valid_avg_loss: 559.7527147180894 Valid_acc: 9.677629861654921
+ --Valid--  Epoch: 29/400  Valid_avg_loss: 558.3789345236386 Valid_acc: 9.866875489428347
+ --Valid--  Epoch: 30/400  Valid_avg_loss: 559.8465492398132 Valid_acc: 9.658052727747325
+ --Valid--  Epoch: 31/400  Valid_avg_loss: 558.5227492089365 Valid_acc: 10.173583920647351
+ --Valid--  Epoch: 32/400  Valid_avg_loss: 558.3443067962048 Valid_acc: 9.788566953797964
