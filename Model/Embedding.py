@@ -13,6 +13,7 @@ class Embeddings(nn.Module):
 
     def forward(self, z):
         x, time = z
+        # embed = self.lut(x)
         embed = self.t_emb(time) + self.lut(x)
         # embed = torch.cat([self.lut(x), self.t_emb(time)], dim=-1)
         return (embed) * math.sqrt(self.d_model)

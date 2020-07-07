@@ -32,16 +32,6 @@ class Decoder(nn.Module):
         return self.norm(x)
         # return x
 
-class Generator(nn.Module):
-    "Define standard linear + softmax generation step."
-    def __init__(self, d_model, token_size):
-        super(Generator, self).__init__()
-        self.place_Linear = nn.Linear(d_model, token_size)
-
-    def forward(self, x):
-        logit = self.place_Linear(x)
-        return logit.contiguous().view(-1, logit.size(-1))
-
 class EncoderDecoder(nn.Module):
     """
     A standard Encoder-Decoder architecture. Base for this and many 
@@ -58,19 +48,14 @@ class EncoderDecoder(nn.Module):
         self.generator = generator
         
     def forward(self, x, x_time, y, y_time):
-        # print(x)
-        # print(y)
-        # exit()
-        x_mask, y_mask, yx_mask = get_mask(x, 'encoder'), get_mask(y, 'decoder'), get_mask(y, 'decoder')
 
-        # print("x",x)
-        # print("x_mask",x_mask)
-        # exit()
+        x_mask, y_mask = get_mask(x, 'encoder'), get_mask(y, 'decoder')
 
         "Take in and process masked src and target sequences."
-        encoder_out = self.encode(x, x_time, x_mask)
-        decoder_out = self.decode(encoder_out, x_mask, y, y_time, y_mask)
-        # encoder2_output = self.encode2(y, y_time, yx_mask)
+        # encoder_out = self.encode(x, x_time, x_mask)
+        # decoder_out = self.decode(encoder_out, x_mask, y, y_time, y_mask)
+        decoder_out = self.decode2(x, x_time, x_mask, y, y_time, y_mask)
+        # encoder2_output = self.encode2(y, y_time, y_mask)
         # out = torch.cat([decoder_out, encoder2_output], dim=-1)
         out = decoder_out
         output = self.generator(out)
@@ -84,3 +69,17 @@ class EncoderDecoder(nn.Module):
 
     def decode(self, memory, x_mask, y, y_time, y_mask):
         return self.decoder(self.encoder_embed((y, y_time)), memory, x_mask, y_mask)
+
+    def decode2(self, x, x_time, x_mask, y, y_time, y_mask):
+        return self.decoder(self.encoder_embed((y, y_time)), self.encoder_embed((x, x_time)), x_mask, y_mask)
+    
+    
+class Generator(nn.Module):
+    "Define standard linear + softmax generation step."
+    def __init__(self, d_model, token_size):
+        super(Generator, self).__init__()
+        self.place_Linear = nn.Linear(d_model, token_size)
+
+    def forward(self, x):
+        logit = self.place_Linear(x)
+        return logit.contiguous().view(-1, logit.size(-1))

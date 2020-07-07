@@ -9,9 +9,15 @@ def clones(module, N):
 def get_mask(x, mode='encoder'):
     len_s = x.size(-1)
     mask_pad = (x != 0).unsqueeze(-2)
+    # print("x",x)
+    # mask_pad = (x!=0)
     if mode=='encoder':
         mask = mask_pad
     elif mode=='decoder':
         mask_next = (1 - torch.triu(torch.ones((1, len_s, len_s), device=x.device), diagonal=1)).bool()
         mask = mask_pad & mask_next
+        # print(mask_pad)
+        # print(mask_next)
+        # print("mask in get mask\n",mask)
+        # exit()
     return mask

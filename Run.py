@@ -4,7 +4,7 @@ import pickle
 import argparse
 from Cofig import parsers
 from Model.Model import make_model
-from Train import train_epoch, valid_epoch
+from Train import train_epoch, valid_epoch, save_model
 from Tool_Gen_Data import generate_input_history, generate_queue, pad_tensor, before_pad_tensor
 from Optimizer import Trans_Optim
 from Eval import cal_loss_performance
@@ -46,7 +46,7 @@ def run(epoch, model, optimizer, device, train_data, train_traj_idx, valid_data,
                 log_tf.write(" --Train--  Epoch: {}/{}  Train_avg_loss: {} Train_acc: {}\n".format(epoch_i, epoch, train_avg_loss, train_acc))
                 log_vf.write(" --Valid--  Epoch: {}/{}  Valid_avg_loss: {} Valid_acc: {}\n".format(epoch_i, epoch, valid_avg_loss, valid_acc)) 
         
-        # if epoch_i % 2==0:
+        # if epoch_i % 5==0:
         #     save_model(epoch_i, model, Predict=True)
         #     print("The step is {} .".format(optimizer._print_step()))
         #     print('-'*150)
@@ -75,7 +75,7 @@ def main(Bert_Pretrain=False, Pretrained=False, log='predict'):
     model = make_model(token_size=len(dataset_4qs['vid_list']), N=args.head_n, d_model=args.d_model, d_ff=args.d_ff, h=args.head_n, dropout=args.dropout)
     if Pretrained:
         print("Load Pretrained Predict Model")
-        model.load_state_dict(torch.load('./pretrain/Predict_model_trained_ep34.pth'))
+        model.load_state_dict(torch.load('./pretrain/Predict_model_trained_ep75.pth'))
     model = model.to(device)
 
     # optimizer = torch.optim.Adam(model.parameters(), lr=3e-4)

@@ -3,7 +3,7 @@ import numpy as np
 from Tool_Gen_Data import pad_tensor, before_pad_tensor
 from Eval import cal_loss_performance, get_acc
 
-def save_model(Epoch, model, file_path="./pretrain/", Predict=False):
+def save_model(Epoch, model, file_path="./Pretrain/", Predict=False):
     if Predict:
         output_path = file_path + "Predict_model_trained_ep%d.pth" % Epoch
     else:

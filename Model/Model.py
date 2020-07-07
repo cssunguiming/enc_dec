@@ -5,6 +5,7 @@ import torch.nn.functional as F
 
 from .Sub_layer import PositionwiseFeedForward, EncoderLayer, DecoderLayer
 from .Attention import MultiHeadedAttention
+from .Attention2 import dec_MultiHeadedAttention
 from .Embedding import Embeddings, PositionalEncoding
 from .Enc_Dec import Encoder, Decoder, Generator, EncoderDecoder
 
@@ -14,6 +15,7 @@ def make_model(token_size, N=6,
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
+    attn2 = dec_MultiHeadedAttention(h, d_model)
     ff = PositionwiseFeedForward(d_model, d_ff, dropout)
     position = PositionalEncoding(d_model, dropout)
     model = EncoderDecoder(

@@ -6,14 +6,16 @@ from .Tool_model import clones
 
 def attention(query, key, value, mask=None, dropout=None):
     "Compute 'Scaled Dot Product Attention'"
-    d_k = query.size(-1)
+    d_k, seq_size = query.size(-1), value.size(-2)
     scores = torch.matmul(query, key.transpose(-2, -1)) \
              / math.sqrt(d_k)
+
+    time = torch.exp(-torch.arange(1, seq_size+1).float().unsqueeze(0).unsqueeze(1).unsqueeze(1)).cuda()
             
     if mask is not None:
         scores = scores.masked_fill_(mask == 0, -1e9)
     
-    p_attn = F.softmax(scores, dim = -1)
+    p_attn = F.softmax(scores-time, dim=-1)
 
     if dropout is not None:
         p_attn = dropout(p_attn)
@@ -40,11 +42,11 @@ def addictive_attention(query, key, value, U, H, v, mask=None, dropout=None):
         p_attn = dropout(p_attn)
     return torch.matmul(p_attn, value), p_attn
 
-class MultiHeadedAttention(nn.Module):
+class dec_MultiHeadedAttention(nn.Module):
 
     def __init__(self, h, d_model, dropout=0.1):
         "Take in model size and number of heads."
-        super(MultiHeadedAttention, self).__init__()
+        super(dec_MultiHeadedAttention, self).__init__()
         assert d_model % h == 0
         # We assume d_v always equals d_k
         self.d_k = d_model // h
